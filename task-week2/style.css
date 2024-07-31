@@ -222,10 +222,11 @@ img {
 
 .contact>.container .media a {
     margin-right: 20px;
+    filter: drop-shadow(4px 4px 8px #00000014);
 }
 
 .contact>.container .media a:hover {
-    filter: drop-shadow(0 0 16px #9094ffe5);
+    filter: drop-shadow(4px 4px 8px #00000014) drop-shadow(0 0 16px #9094ffe5);
 }
 
 /* projects */
