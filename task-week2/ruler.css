@@ -1,0 +1,13 @@
+/* ruler */
+body {
+    width: 1920px;
+    position: relative;
+}
+
+.ruler {
+    position: absolute;
+    width: 1296px;
+    height: 100%;
+    margin-left: 312px;
+    border: 1px solid red;
+}
