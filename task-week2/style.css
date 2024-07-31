@@ -160,6 +160,7 @@ img {
 .exp>.cards .card {
     border: 1px solid #e3e3e3;
     padding: 15px;
+    filter: drop-shadow(4px 4px 4px #00000014);
     margin-right: 24px;
     margin-bottom: 24px;
 }
