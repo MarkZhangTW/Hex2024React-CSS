@@ -34,7 +34,8 @@
     background-color: #FBF2F2;
   
     >.container {
-      padding: 80px 0;
+      padding: 80px 12px;
+      max-width: 1320px;
   
       display: flex;
       flex-direction: column;
@@ -49,15 +50,17 @@
   
       ul {
         display: flex;
-        margin-right: -20px;
+        margin-left: -12px;
+        margin-right: -12px;
   
         li {
           display: flex;
           flex-direction: column;
           align-items: center;
-          max-width: 306px;
-          margin-right: 20px;
-  
+          width: 25%;
+          margin-left: 12px;
+          margin-right: 12px;
+    
           img {
             width: 100px;
             margin-bottom: 16px;
@@ -74,8 +77,9 @@
     }
   }
   
-  >.classics>.container {
-    padding: 80px 0;
+  >.series>.container {
+    padding: 80px 12px;
+    max-width: 1320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,14 +93,16 @@
   
     ul {
       display: flex;
-      margin-right: -24px;
+      margin-left: -12px;
+      margin-right: -12px;
   
       li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 416px;
-        margin-right: 24px;
+        width: 33%;
+        margin-left: 12px;
+        margin-right: 12px;
   
         img {
           margin-bottom: 8px;
@@ -134,28 +140,25 @@
       ul {
         display: flex;
   
-        li {
-          max-width: 648px;
-          
-          h3 {
-            background-color: #FFFFFF;
-            font-family: Roboto;
-            font-size: 48px;
-            font-weight: 900;
-            font-style: italic;
-            color: #AA0601;
-            padding: 8px 0;
-            text-align: center;
-            border-left: 1px solid #DDD;
-            border-right: 1px solid #DDD;
-          }
+        li>h3 {
+          background-color: #FFFFFF;
+          font-family: Roboto;
+          font-size: 48px;
+          font-weight: 900;
+          font-style: italic;
+          color: #AA0601;
+          padding: 8px 0;
+          text-align: center;
+          border-left: 1px solid #DDD;
+          border-right: 1px solid #DDD;
         }
       }
     }
   }
   
   >.recommends>.container {
-    padding: 80px 0;
+    padding: 80px 12px;
+    max-width: 1320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,11 +172,13 @@
   
     ul {
       display: flex;
-      margin-right: -24px;
+      margin-left: -12px;
+      margin-right: -12px;
   
       li {
-        max-width: 306px;
-        margin-right: 24px;
+        width: 25%;
+        margin-left: 12px;
+        margin-right: 12px;
         box-shadow: 0 2px 6px #00000029;
         display: flex;
         flex-direction: column;
