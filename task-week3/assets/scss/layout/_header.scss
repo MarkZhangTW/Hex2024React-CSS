@@ -1,0 +1,31 @@
+.header {
+  background: $bgc-main;
+
+  >.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    .logo {
+      width: 80px;
+      height: 100%;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      margin-right: -64px;
+
+      li {
+        margin-right: 64px;
+
+        a {
+          font-size: 20px;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+  }
+
+}
