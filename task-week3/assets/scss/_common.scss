@@ -1,17 +1,5 @@
 $bgc-main: #AA0601;
 
-body {
-    font-family: "Noto Sans TC", "Roboto", sans-serif;
-    line-height: 1.5;
-
-    div {
-        .container {
-            max-width: 1296px;
-            margin: 0 auto;
-        }
-    }
-}
-
 a {
     text-decoration: none;
 }
@@ -29,4 +17,16 @@ img {
 
 *,*::before,*::after {
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans TC", "Roboto", sans-serif;
+    line-height: 1.5;
+
+    div {
+        .container {
+            max-width: 1296px;
+            margin: 0 auto;
+        }
+    }
 }
