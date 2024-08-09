@@ -25,10 +25,10 @@
       .media {
         display: flex;
         align-items: center;
-        margin-right: -32px;
+        margin-left: -32px;
 
         a {
-          margin-right: 32px;
+          margin-left: 32px;
 
           img {
             width: 48px;
@@ -73,11 +73,11 @@
       }
 
       .links {
-        margin-right: -48px;
+        margin-left: -48px;
         a {
           font-size: 14px;
           color: #FFFFFF;
-          margin-right: 48px;
+          margin-left: 48px;
         }
       }
     }
