@@ -10,7 +10,7 @@
 
         a {
           border: 1px solid #DCDCDC;
-          padding: 24px 0;
+          padding: 23px 0;
           width: 100%;
           font-family: "Roboto", sans-serif;
           font-size: 32px;
@@ -33,13 +33,9 @@
   >.banners>.banner.active {
     display: flex;
 
-    img {
-      max-width: 50%;
-    }
-
     .bg {
       width: 50%;
-      aspect-ratio: 3;
+      aspect-ratio: 3.243243;
       background-size: cover;
       background-position: center;
     }
@@ -145,12 +141,12 @@
             font-family: "Roboto", sans-serif;
             font-size: 18px;
             color: #555555;
-            padding: 12px 16px;
+            padding: 9px 16px;
             border: 1px solid #555555;
           }
           a.prev, a.next {
             font-size: 19px;
-            padding: 11px 16px;
+            padding: 8px 16px;
           }
           a.prev,a.number {
             border-right: none;
