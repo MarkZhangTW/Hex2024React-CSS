@@ -1,0 +1,36 @@
+.wrap-faq>.faq>.container {
+  padding: 96px 0 80px;
+
+  >* {
+    max-width: 66.05%;
+  }
+
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    border-left: 8px solid #9F1213;
+    padding-left: 12px;
+    margin-bottom: 32px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+
+  ul {
+    margin-bottom: -32px;
+
+    li {
+      .question {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 8px;
+      }
+      .answer {
+          margin-bottom: 32px;
+      }
+    }
+  }
+}
