@@ -15,22 +15,23 @@
   <%- include('./layout/header'); -%>
   <!-- NoFormat -->
 
-  <div class="wrap-locations">
-    <div class="locations">
+  <div class="wrap-stores">
+    <div class="stores">
       <div class="container">
         <h1 class="title">門市據點</h1>
         <div class="menu">
-          <label for="select-location">選擇地區</label>
-          <select name="location" id="select-location">
-            <option value="">全部</option>
-            <option value="TP">台北市</option>
-            <option value="TC">台中市</option>
-            <option value="KS">高雄市</option>
+          <label for="select-store">選擇分店</label>
+          <select name="store" id="select-store">
+            <option value="TP01">台北中山旗艦店</option>
+            <option value="TP02">台北綠園店</option>
+            <option value="TC01">台中清水旗艦店</option>
+            <option value="KS01">高雄中正形象店</option>
+            <option value="KS02">高雄夢時代店</option>
           </select>
         </div>
-        <ul>
-          <li class="location location-TP selected">
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/store-1.png" alt="Store 01">
+        <div class="store selected" id="store-TP01">
+          <div class="info">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/storepage-1.png" alt="Store 01">
             <div class="text">
               <h2 class="name">台北中山旗艦店</h2>
               <div class="contacts">
@@ -47,10 +48,14 @@
                   <p>地址：台北市中山區南京東路25巷2-1號</p>
                 </div>
               </div>
-              <a href="stores.html?store=TP01">詳細資訊</a>
             </div>
-          </li>
-          <li class="location location-TP selected">
+          </div>
+          <div class="map">
+            <div class="map-google">Embeded Google Map</div>
+          </div>
+        </div>
+        <div class="store" id="store-TP02">
+          <div class="info">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/store-2.png" alt="Store 02">
             <div class="text">
               <h2 class="name">台北綠園店</h2>
@@ -68,10 +73,14 @@
                   <p>地址：台北市中正區復興南路 132-1 號</p>
                 </div>
               </div>
-              <a href="stores.html?store=TP02">詳細資訊</a>
             </div>
-          </li>
-          <li class="location location-TC selected">
+          </div>
+          <div class="map">
+            <div class="map-google">Embeded Google Map</div>
+          </div>
+        </div>
+        <div class="store" id="store-TC01">
+          <div class="info">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/store-3.png" alt="Store 03">
             <div class="text">
               <h2 class="name">台中清水旗艦店</h2>
@@ -89,10 +98,14 @@
                   <p>地址：台中市清水區經南一路 23 號 8 樓</p>
                 </div>
               </div>
-              <a href="stores.html?store=TC01">詳細資訊</a>
             </div>
-          </li>
-          <li class="location location-KS selected">
+          </div>
+          <div class="map">
+            <div class="map-google">Embeded Google Map</div>
+          </div>
+        </div>
+        <div class="store" id="store-KS01">
+          <div class="info">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/store-4.png" alt="Store 04">
             <div class="text">
               <h2 class="name">高雄中正形象店</h2>
@@ -110,10 +123,14 @@
                   <p>地址：高雄市苓雅區中正路 38 號 12 樓</p>
                 </div>
               </div>
-              <a href="stores.html?store=KS01">詳細資訊</a>
             </div>
-          </li>
-          <li class="location location-KS selected">
+          </div>
+          <div class="map">
+            <div class="map-google">Embeded Google Map</div>
+          </div>
+        </div>
+        <div class="store" id="store-KS02">
+          <div class="info">
             <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/store-5.png" alt="Store 05">
             <div class="text">
               <h2 class="name">高雄夢時代店</h2>
@@ -131,10 +148,12 @@
                   <p>地址：高雄市前鎮區中華一路 63 號 6 樓</p>
                 </div>
               </div>
-              <a href="stores.html?store=KS02">詳細資訊</a>
             </div>
-          </li>
-        </ul>
+          </div>
+          <div class="map">
+            <div class="map-google">Embeded Google Map</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

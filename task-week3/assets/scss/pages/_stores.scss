@@ -1,0 +1,89 @@
+.wrap-stores {
+  >.stores>.container {
+    padding: 96px 12px 80px;
+    max-width: 1320px;
+
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      border-left: 8px solid #9F1213;
+      padding-left: 12px;
+      margin-bottom: 32px;
+    }
+
+    .menu {
+      width: 33.3333%;
+      display: flex;
+      margin-bottom: 40px;
+
+      label {
+        font-size: 24px;
+        margin-right: 16px;
+      }
+      select {
+        flex-grow: 1;
+        font-size: 18px;
+        color: #495057C0;
+        padding-left: 11px;
+        border: 1px solid #CED4DA;
+      }
+    }
+
+    .store {
+      display: none;
+    }
+
+    .store.selected {
+      display: flex;
+      margin: 0 -12px;
+
+      .info {
+        width: 41.666666%;
+        padding: 0 12px;
+
+        img {
+          aspect-ratio: 2.348214;
+          object-fit: cover;
+        }
+
+        .text {
+          .name {
+            font-size: 24px;
+            border: 1px solid #00000020;
+            padding: 7px 23px;
+          }
+          .contacts {
+            font-size: 20px;
+            border: 1px solid #00000020;
+            padding: 15px 23px;
+
+            >div {
+              display: flex;
+              margin-bottom: 8px;
+
+              .material-symbols-outlined {
+                margin-top: 4px;
+                margin-right: 8px;
+              }
+            }
+            >div.address {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .map {
+        width: 58.333333%;
+        padding: 0 12px;
+        .map-google {
+          background-color: #7AAD7B20;
+          border: 1px solid gray;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

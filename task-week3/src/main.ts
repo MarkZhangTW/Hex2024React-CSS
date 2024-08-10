@@ -59,3 +59,48 @@ let selectLocation = document.getElementById('select-location')
 if (selectLocation instanceof HTMLSelectElement) {
     selectLocation.addEventListener("change", locationFilterEvent);
 }
+
+// Add store selector to Stores page.
+let isStoresPage: boolean = pageName === 'stores';
+if (isStoresPage) {
+    let selectStoreChangeEvent = (ev: Event) => {
+        let select = ev.target;
+        if (select instanceof HTMLSelectElement) {
+            let stores: NodeListOf<HTMLDivElement> = document.querySelectorAll('.store');
+            if (select.value.length != 0) {
+                let storeSelectedId = 'store-' + select.value;
+                stores.forEach(tag => tag.classList.remove('selected'));
+                let storeSelected = document.getElementById(storeSelectedId);
+                storeSelected?.classList.add('selected');
+            }
+        }
+    }
+    let selectStore = document.getElementById('select-store');
+    if (selectStore instanceof HTMLSelectElement) {
+        selectStore.addEventListener('change', selectStoreChangeEvent);
+    }
+    // Select store from query string
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('store')) {
+        let select = document.getElementById('select-store');
+        if (select instanceof HTMLSelectElement) {
+            let storeOptions: HTMLOptionsCollection = select.options;
+            let selectedStore = urlParams.get('store');
+            let isExistedStore: boolean = false;
+            let selectedIndex: number = -1;
+            for (let option of storeOptions) {
+                if (option.value === selectedStore) {
+                    isExistedStore = true;
+                    selectedIndex = option.index;
+                    select.selectedIndex = selectedIndex;
+                    select.dispatchEvent(new Event('change'));
+                    break;
+                }
+            }
+        }
+        // Remove store query parameter.
+        urlParams.delete('store');
+        let newQueryString = urlParams.size === 0 ? '' : '?' + urlParams.toString();
+        window.history.replaceState({}, document.title, window.location.pathname + newQueryString);
+    }
+}
