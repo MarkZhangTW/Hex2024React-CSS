@@ -1,0 +1,148 @@
+.wrap-blog {
+  >div>.container {
+    padding: 13px 12px;
+    max-width: 1320px;
+  }
+
+  >.nav-bar {
+    background-color: #650300;
+    color: #FFFFFF;
+
+    >.container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .links {
+        display: flex;
+        margin-right: -48px;
+
+        .link {
+          margin-right: 48px;
+
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .search>.material-symbols-outlined {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  >.blog>.container {
+    padding: 96px 12px 80px;
+    display: flex;
+    flex-direction: column;
+
+    >.title {
+      font-size: 48px;
+      font-weight: bold;
+      border-left: 8px solid #9F1213;
+      padding-left: 12px;
+      margin-bottom: 32px;
+    }
+
+    >.posts {
+      margin-bottom: 64px;
+
+      >.post {
+        margin: 0 -12px 60px;
+        display: flex;
+
+        >* {
+          padding: 0 12px;
+          width: 50%;
+        }
+
+        >img {
+          align-self: center;
+        }
+
+        >.text {
+          display: flex;
+          flex-direction: column;
+
+          .title {
+            font-size: 32px;
+            color: #650300;
+
+            a:hover {
+              filter: none;
+              color: #AA0601;
+            }
+          }
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+
+            .subtitle {
+              font-family: "Roboto", sans-serif;
+              font-size: 20px;
+              font-weight: 500;
+            }
+
+            .date {
+              color: #000000B3;
+            }
+          }
+
+          p.preview {
+            font-size: 20px;
+            color: #555555;
+          }
+
+          a.more {
+            font-size: 36px;
+            font-weight: 900;
+            color: #650300;
+            margin-top: auto;
+            margin-left: auto;
+          }
+
+          a.more:hover {
+            filter: none;
+            color: #AA0601;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      align-self: center;
+
+      li {
+        display: flex;
+
+        a {
+          font-family: "Roboto", sans-serif;
+          font-size: 18px;
+          color: #555555;
+          border: 1px solid #555555;
+          padding: 10px 15px;
+        }
+        a.number,a.next {
+          border-left: none;
+        }
+        a.active {
+          background-color: #000000;
+          color: #FFFFFF;
+        }
+        a.next {
+          background-color: #F2F2F2;
+        }
+        a:hover {
+          filter: none;
+        }
+      }
+    }
+  }
+}
