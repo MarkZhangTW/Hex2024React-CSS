@@ -19,7 +19,7 @@ firstBanner?.classList.add('active');
 firstItems?.classList.add('active');
 
 // Add switch selection for series page.
-let selectionOnClick = (ev: MouseEvent) => {
+let selectionOnClickEvent = (ev: MouseEvent) => {
     // Deactivate all selections, banners, and items.
     let selections: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('a.selection');
     let banners: NodeListOf<HTMLDivElement> = document.querySelectorAll('div.banner');
@@ -38,7 +38,7 @@ let selectionOnClick = (ev: MouseEvent) => {
     }
 }
 let selectionLink: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('a.selection');
-selectionLink.forEach(tag => tag.addEventListener("click", selectionOnClick));
+selectionLink.forEach(tag => tag.addEventListener("click", selectionOnClickEvent));
 
 // Add locations selection filter
 let locationFilterEvent = (ev: Event) => {
