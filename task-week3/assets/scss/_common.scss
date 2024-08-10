@@ -1,32 +1,34 @@
 $bgc-main: #AA0601;
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 a:visited {
-    color: inherit;
+  color: inherit;
 }
+
 a:hover {
-    filter:invert(1);
+  filter: invert(1);
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 *,*::before,*::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Noto Sans TC", "Roboto", sans-serif;
-    line-height: 1.5;
+  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  line-height: 1.5;
 
-    div {
-        .container {
-            max-width: 1296px;
-            margin: 0 auto;
-        }
+  div {
+    .container {
+      max-width: 1296px;
+      margin: 0 auto;
     }
+  }
 }
