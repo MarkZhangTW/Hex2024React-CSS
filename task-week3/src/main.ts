@@ -38,4 +38,4 @@ let selectionOnClick = (ev: MouseEvent) => {
     }
 }
 let selectionLink: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('a.selection');
-selectionLink.forEach(tag => tag.onclick = selectionOnClick);
+selectionLink.forEach(tag => tag.addEventListener("click", selectionOnClick));
