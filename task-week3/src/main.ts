@@ -39,3 +39,23 @@ let selectionOnClick = (ev: MouseEvent) => {
 }
 let selectionLink: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('a.selection');
 selectionLink.forEach(tag => tag.addEventListener("click", selectionOnClick));
+
+// Add locations selection filter
+let locationFilterEvent = (ev: Event) => {
+    let select = ev.target;
+    if (select instanceof HTMLSelectElement) {
+        let locations: NodeListOf<HTMLLIElement> = document.querySelectorAll('li.location');
+        if (select.value.length != 0) {
+            let locationFilter = 'location-' + select.value;
+            let locationsFiltered: NodeListOf<HTMLLIElement> = document.querySelectorAll('li.' + locationFilter);
+            locations.forEach(tag => tag.classList.remove('selected'));
+            locationsFiltered.forEach(tag => tag.classList.add('selected'));
+        } else {
+            locations.forEach(tag => tag.classList.add('selected'));
+        }
+    }
+}
+let selectLocation = document.getElementById('select-location')
+if (selectLocation instanceof HTMLSelectElement) {
+    selectLocation.addEventListener("change", locationFilterEvent);
+}
