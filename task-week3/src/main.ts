@@ -92,10 +92,12 @@ if (isStoresPage) {
                 if (option.value === selectedStore) {
                     isExistedStore = true;
                     selectedIndex = option.index;
-                    select.selectedIndex = selectedIndex;
-                    select.dispatchEvent(new Event('change'));
                     break;
                 }
+            }
+            if (isExistedStore) {
+                select.selectedIndex = selectedIndex;
+                select.dispatchEvent(new Event('change'));
             }
         }
         // Remove store query parameter.
