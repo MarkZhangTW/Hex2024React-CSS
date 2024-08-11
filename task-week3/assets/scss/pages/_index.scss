@@ -1,0 +1,304 @@
+.wrap-index {
+  >.banner {
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png);
+    background-size: cover;
+    background-position: center;
+  
+    >.container {
+      padding: 296px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+  
+      p {
+        font-size: 36px;
+        color: #650300;
+      }
+  
+      .slogan {
+        font-size: 64px;
+        color: #650300;
+        margin-bottom: 4px;
+      }
+  
+      a {
+        padding: 6px 12px;
+        background-color: #AA0601;
+        font-size: 20px;
+        color: #FFFFFF;
+      }
+      a:hover {
+        filter: none;
+        background-color: #650300;
+      }
+    }
+  }
+  
+  >.features {
+    background-color: #FBF2F2;
+  
+    >.container {
+      padding: 80px 12px;
+      max-width: 1320px;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #650300;
+        margin-bottom: 24px;
+      }
+  
+      ul {
+        display: flex;
+        margin-left: -12px;
+        margin-right: -12px;
+  
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 25%;
+          margin-left: 12px;
+          margin-right: 12px;
+    
+          img {
+            width: 100px;
+            margin-bottom: 16px;
+          }
+  
+          h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #650300;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+  
+  >.series>.container {
+    padding: 80px 12px;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      color: #650300;
+      margin-bottom: 48px;
+    }
+  
+    ul {
+      display: flex;
+      margin-left: -12px;
+      margin-right: -12px;
+  
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        margin-left: 12px;
+        margin-right: 12px;
+  
+        img {
+          margin-bottom: 8px;
+        }
+  
+        h3 {
+          font-family: "Roboto", sans-serif;
+          font-size: 48px;
+          font-weight: 900;
+          font-style: italic;
+          color: #AA0601;
+        }
+      }
+    }
+  }
+  
+  >.co-branding {
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg.png);
+    background-size: cover;
+    background-position: center;
+  
+    >.container {
+      padding: 80px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #FFFFFF;
+        margin-bottom: 48px;
+      }
+  
+      ul {
+        display: flex;
+  
+        li>h3 {
+          background-color: #FFFFFF;
+          font-family: Roboto;
+          font-size: 48px;
+          font-weight: 900;
+          font-style: italic;
+          color: #AA0601;
+          padding: 8px 0;
+          text-align: center;
+          border-left: 1px solid #DDD;
+          border-right: 1px solid #DDD;
+        }
+      }
+    }
+  }
+  
+  >.recommends>.container {
+    padding: 80px 12px;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      color: #650300;
+      margin-bottom: 48px;
+    }
+  
+    ul {
+      display: flex;
+      margin-left: -12px;
+      margin-right: -12px;
+  
+      li {
+        width: 25%;
+        margin-left: 12px;
+        margin-right: 12px;
+        box-shadow: 0 2px 6px #00000029;
+        display: flex;
+        flex-direction: column;
+  
+        img {
+          border-radius: 4px 4px 0 0;
+        }
+  
+        .text {
+          padding: 15px;
+          border: 1px solid #DEE2E6;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+  
+          .info {
+            .name {
+              font-weight: 500;
+              margin-bottom: 8px;
+            }
+  
+            p {
+              min-height: 7.5em;
+            }
+          }
+  
+          .date {
+            margin-top: auto;
+            font-size: 14px;
+            color: #707070;
+          }
+        }
+      }
+    }
+  }
+  
+  >.feedback {
+    background-color: #FBF2F2;
+  
+    >.container {
+      padding: 80px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 636px;
+  
+      .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #650300;
+        margin-bottom: 48px;
+      }
+  
+      p {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+  
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+  
+        .form-contact {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 16px;
+  
+          label {
+            margin-bottom: 8px;
+          }
+  
+          input, textarea {
+            background: #00000000;
+            border: 1px solid #000000;
+            padding: 5px 11px;
+            font-size: 16px;
+            line-height: 1.5;
+          }
+  
+          input::placeholder, textarea::placeholder {
+            color: #00000033;
+          }
+        }
+  
+        .privacy {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: start;
+          margin-bottom: 48px;
+  
+          label {
+            margin-bottom: 0;
+          }
+  
+          input {
+            background-color: transparent;
+          }
+        }
+  
+        .submit {
+          padding: 16px 176px;
+          font-family: "Noto Sans TC";
+          font-weight: bold;
+          font-size: 16px;
+          color: #FFFFFF;
+          background-color: #AA0601;
+          border: none;
+          margin: 0 auto;
+          cursor: pointer;
+        }
+  
+        .submit:hover {
+          background-color: #650300;
+        }
+      }
+    }
+  }
+}
