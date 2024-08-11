@@ -26,6 +26,10 @@ export default defineConfig({
           fileURLToPath(new URL(file, import.meta.url))
         ])
       ),
+      output: {
+        "assetFileNames": "assets/[name][extname]",
+        "chunkFileNames": "assets/[name].js"
+      }
     },
     outDir: 'dist/task-week3'
   }
