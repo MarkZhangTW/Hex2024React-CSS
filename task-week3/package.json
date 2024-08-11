@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist --add true"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "glob": "^11.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
