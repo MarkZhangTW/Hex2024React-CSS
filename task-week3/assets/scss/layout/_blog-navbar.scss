@@ -1,0 +1,25 @@
+.wrapper-blog-navbar>.navbar {
+  background-color: $color-primary-dark;
+  color: $color-white;
+
+  >.container {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+      display: flex;
+
+      .link {
+        margin-right: 48px;
+        font-size: 20px;
+      }
+    }
+
+    a.search {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,8 +1,10 @@
-.footer {
-  background-color: $bgc-main;
+.wrapper-footer>.footer {
+  background-color: $color-primary;
+  color: $color-white;
 
   >.container {
     padding-top: 48px;
+    padding-bottom: 32px;
     display: flex;
     flex-direction: column;
 
@@ -14,10 +16,8 @@
       .nav {
         display: flex;
         align-items: center;
-        margin-right: -48px;
 
         a {
-          color: #FFFFFF;
           margin-right: 48px;
         }
       }
@@ -25,33 +25,27 @@
       .media {
         display: flex;
         align-items: center;
-        margin-left: -32px;
 
         a {
+          width: 3em;
           margin-left: 32px;
-
-          img {
-            width: 48px;
-          }
         }
 
       }
     }
 
     .contact {
-      display: flex;
-      flex-direction: column;
       margin-bottom: 32px;
 
       a {
         font-size: 36px;
-        color: #FFFFFF;
+        display: flex;
+        align-items: center;
         margin-bottom: 8px;
 
         span {
-          font-size: 36px;
-          margin-right: 20px;
-          vertical-align: middle;
+          font-size: 1.333333em;
+          margin-right: 16px;
         }
 
       }
@@ -65,20 +59,10 @@
     .policies {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 32px;
 
-      p {
-        color: #FFFFFF;
-      }
-
-      .links {
-        margin-left: -48px;
-        a {
-          font-size: 14px;
-          color: #FFFFFF;
-          margin-left: 48px;
-        }
+      .links>a {
+        font-size: 14px;
+        margin-left: 48px;
       }
     }
   }

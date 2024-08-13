@@ -1,11 +1,17 @@
-$bgc-main: #AA0601;
+$color-primary: #AA0601;
+$color-primary-dark: #650300;
+$color-primary-light: #FBF2F2;
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-border: #DCDCDC;
+$color-glasses-dark: #5F3E2D;
+$color-glasses-light: #B75929;
+$color-text-light: #555555;
+$color-bar-title: #9F1213;
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
+a,
 a:visited {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -28,10 +34,14 @@ body {
   font-family: "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", "Roboto", sans-serif, system-ui;
   line-height: 1.5;
 
-  div {
-    .container {
-      max-width: 1296px;
-      margin: 0 auto;
-    }
+  >.wrapper>div>.container {
+    margin: 0 auto;
+    max-width: 1320px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif, system-ui;
 }

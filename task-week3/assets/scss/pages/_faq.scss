@@ -1,14 +1,15 @@
-.wrap-faq>.faq>.container {
-  padding: 96px 0 80px;
+.wrapper-faq>.faq>.container {
+  padding-top: 96px;
+  padding-bottom: 80px;
 
   >* {
-    max-width: 66.05%;
+    max-width: 856px;
   }
 
   .title {
     font-size: 48px;
     font-weight: bold;
-    border-left: 8px solid #9F1213;
+    border-left: 8px solid $color-bar-title;
     padding-left: 12px;
     margin-bottom: 32px;
   }
@@ -24,12 +25,13 @@
 
     li {
       .question {
-          font-size: 20px;
-          font-weight: bold;
-          margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 8px;
       }
+
       .answer {
-          margin-bottom: 32px;
+        margin-bottom: 32px;
       }
     }
   }

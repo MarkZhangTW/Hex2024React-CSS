@@ -1,46 +1,46 @@
-.wrap-index {
+.wrapper-index {
   >.banner {
     background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png);
     background-size: cover;
     background-position: center;
   
     >.container {
-      padding: 296px 0;
+      height: calc(100vh - 80px);
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: flex-end;
+      color: $color-primary-dark;
   
       p {
         font-size: 36px;
-        color: #650300;
       }
   
       .slogan {
         font-size: 64px;
-        color: #650300;
         margin-bottom: 4px;
       }
   
       a {
         padding: 6px 12px;
-        background-color: #AA0601;
+        background-color: $color-primary;
         font-size: 20px;
-        color: #FFFFFF;
+        color: $color-white;
       }
       a:hover {
         filter: none;
-        background-color: #650300;
+        background-color: $color-primary-dark;
       }
     }
   }
   
   >.features {
-    background-color: #FBF2F2;
+    background-color: $color-primary-light;
+    color: $color-primary-dark;
   
     >.container {
-      padding: 80px 12px;
-      max-width: 1320px;
-  
+      padding-top: 80px;
+      padding-bottom: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -48,7 +48,6 @@
       .title {
         font-size: 48px;
         font-weight: bold;
-        color: #650300;
         margin-bottom: 24px;
       }
   
@@ -62,19 +61,22 @@
           flex-direction: column;
           align-items: center;
           width: 25%;
-          margin-left: 12px;
-          margin-right: 12px;
+          padding-left: 12px;
+          padding-right: 12px;
     
           img {
-            width: 100px;
+            max-width: 100px;
             margin-bottom: 16px;
           }
   
           h3 {
             font-size: 24px;
             font-weight: bold;
-            color: #650300;
             margin-bottom: 8px;
+          }
+          
+          p {
+            color: $color-black;
           }
         }
       }
@@ -82,16 +84,16 @@
   }
   
   >.series>.container {
-    padding: 80px 12px;
-    max-width: 1320px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
-    align-items: center;
   
     .title {
+      align-self: center;
       font-size: 48px;
       font-weight: bold;
-      color: #650300;
+      color: $color-primary-dark;
       margin-bottom: 48px;
     }
   
@@ -104,20 +106,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 33%;
-        margin-left: 12px;
-        margin-right: 12px;
+        width: 33.333333%;
+        padding-left: 12px;
+        padding-right: 12px;
   
         img {
           margin-bottom: 8px;
         }
   
         h3 {
-          font-family: "Roboto", sans-serif;
           font-size: 48px;
           font-weight: 900;
           font-style: italic;
-          color: #AA0601;
+          color: $color-primary;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
         }
       }
     }
@@ -129,7 +133,8 @@
     background-position: center;
   
     >.container {
-      padding: 80px 0;
+      padding-top: 80px;
+      padding-bottom: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -137,7 +142,7 @@
       .title {
         font-size: 48px;
         font-weight: bold;
-        color: #FFFFFF;
+        color: $color-white;
         margin-bottom: 48px;
       }
   
@@ -145,24 +150,24 @@
         display: flex;
   
         li>h3 {
-          background-color: #FFFFFF;
-          font-family: Roboto;
+          background-color: $color-white;
           font-size: 48px;
           font-weight: 900;
           font-style: italic;
-          color: #AA0601;
-          padding: 8px 0;
+          color: $color-primary;
+          padding-top: 8px;
+          padding-bottom: 8px;
           text-align: center;
-          border-left: 1px solid #DDD;
-          border-right: 1px solid #DDD;
+          border-left: 1px solid $color-border;
+          border-right: 1px solid $color-border;
         }
       }
     }
   }
   
   >.recommends>.container {
-    padding: 80px 12px;
-    max-width: 1320px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,7 +175,7 @@
     .title {
       font-size: 48px;
       font-weight: bold;
-      color: #650300;
+      color: $color-primary-dark;
       margin-bottom: 48px;
     }
   
@@ -181,9 +186,8 @@
   
       li {
         width: 25%;
-        margin-left: 12px;
-        margin-right: 12px;
-        box-shadow: 0 2px 6px #00000029;
+        padding-left: 12px;
+        padding-right: 12px;
         display: flex;
         flex-direction: column;
   
@@ -194,6 +198,7 @@
         .text {
           padding: 15px;
           border: 1px solid #DEE2E6;
+          box-shadow: 0 2px 6px #00000029;
           display: flex;
           flex-direction: column;
           height: 100%;
@@ -220,10 +225,11 @@
   }
   
   >.feedback {
-    background-color: #FBF2F2;
+    background-color: $color-primary-light;
   
     >.container {
-      padding: 80px 0;
+      padding-top: 80px;
+      padding-bottom: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -232,7 +238,7 @@
       .title {
         font-size: 48px;
         font-weight: bold;
-        color: #650300;
+        color: $color-primary-dark;
         margin-bottom: 48px;
       }
   
@@ -256,8 +262,8 @@
           }
   
           input, textarea {
-            background: #00000000;
-            border: 1px solid #000000;
+            background-color: inherit;
+            border: 1px solid $color-black;
             padding: 5px 11px;
             font-size: 16px;
             line-height: 1.5;
@@ -277,26 +283,23 @@
           label {
             margin-bottom: 0;
           }
-  
-          input {
-            background-color: transparent;
-          }
         }
   
         .submit {
-          padding: 16px 176px;
-          font-family: "Noto Sans TC";
+          padding: 1em 11em;
+          font-family: inherit;
           font-weight: bold;
-          font-size: 16px;
-          color: #FFFFFF;
-          background-color: #AA0601;
+          font-size: inherit;
+          line-height: inherit;
+          color: $color-white;
+          background-color: $color-primary;
           border: none;
-          margin: 0 auto;
+          align-self: center;
           cursor: pointer;
         }
   
         .submit:hover {
-          background-color: #650300;
+          background-color: $color-primary-dark;
         }
       }
     }
