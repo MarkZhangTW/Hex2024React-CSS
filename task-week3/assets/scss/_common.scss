@@ -33,15 +33,23 @@ img {
 body {
   font-family: "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", "Roboto", sans-serif, system-ui;
   line-height: 1.5;
-
-  >.wrapper>div>.container {
-    margin: 0 auto;
-    max-width: 1320px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
 }
 
 .font-roboto {
   font-family: "Roboto", sans-serif, system-ui;
+}
+
+// Top Wrapper
+body>.wrapper>div>.container {
+  margin: 0 auto;
+  max-width: 1296px;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1320px;
+
+  @media (max-width: 992px) {
+    max-width: 768px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }

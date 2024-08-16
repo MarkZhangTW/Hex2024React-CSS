@@ -39,22 +39,42 @@
       aspect-ratio: 3.243243;
       background-size: cover;
       background-position: center;
+
+      @media (max-width: 992px) {
+        aspect-ratio: 1.382352941176471;
+      }
     }
 
     .bg1 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-1.png');
+
+      @media (max-width: 992px) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-1.png');
+      }
     }
 
     .bg2 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-2.png');
+
+      @media (max-width: 992px) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-2.png');
+      }
     }
 
     .bg3 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-3.png');
+
+      @media (max-width: 992px) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-3.png');
+      }
     }
 
     .bg4 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-4.png');
+
+      @media (max-width: 992px) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-4.png');
+      }
     }
 
     .bg5 {
@@ -96,6 +116,10 @@
         margin-left: -12px;
         margin-right: -12px;
 
+        @media (max-width: 992px) {
+          margin-bottom: 40px;
+        }
+
         li {
           display: flex;
           flex-direction: column;
@@ -103,6 +127,11 @@
           padding-left: 12px;
           padding-right: 12px;
           margin-bottom: 80px;
+
+          @media (max-width: 992px) {
+            width: 50%;
+            margin-bottom: 40px;
+          }
 
           .text {
             display: flex;
@@ -145,9 +174,17 @@
 
   >.items.active.items-sunglasses>.container>ul.items>li {
     width: 33.333333%;
+
+    @media (max-width: 992px) {
+      width: 50%;
+    }
   }
 
   >.items.active.items-functional>.container>ul.items>li {
     width: 33.333333%;
+
+    @media (max-width: 992px) {
+      width: 50%;
+    }
   }
 }

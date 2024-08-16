@@ -16,6 +16,7 @@
       .nav {
         display: flex;
         align-items: center;
+        margin-right: -48px;
 
         a {
           margin-right: 48px;
@@ -25,10 +26,20 @@
       .media {
         display: flex;
         align-items: center;
+        margin-left: -32px;
+
+        @media (max-width: 992px) {
+          margin-left: -16px;
+        }
 
         a {
           width: 3em;
           margin-left: 32px;
+
+          @media (max-width: 992px) {
+            width: 40px;
+            margin-left: 16px;
+          }
         }
 
       }

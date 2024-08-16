@@ -29,6 +29,11 @@
 
       >img {
         align-self: center;
+
+        @media (max-width: 992px) {
+          aspect-ratio: 1.730769230769231;
+          object-fit: cover;
+        }
       }
 
       >.text {
@@ -38,6 +43,10 @@
         .title {
           font-size: 32px;
           color: $color-primary-dark;
+
+          @media (max-width: 992px) {
+            font-size: 24px;
+          }
 
           a:hover {
             filter: none;
@@ -51,9 +60,17 @@
           align-items: center;
           margin-bottom: 16px;
 
+          @media (max-width: 992px) {
+            margin-bottom: 4px;
+          }
+
           .subtitle {
             font-size: 20px;
             font-weight: 500;
+
+            @media (max-width: 992px) {
+              font-size: 16px;
+            }
           }
 
           .date {
@@ -61,22 +78,61 @@
           }
         }
 
-        p.preview {
-          font-size: 20px;
-          color: $color-text-light;
-        }
+        .preview {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
 
-        a.more {
-          font-size: 36px;
-          font-weight: 900;
-          color: $color-primary-dark;
-          margin-top: auto;
-          margin-left: auto;
-        }
+          p {
+            font-size: 20px;
+            color: $color-text-light;
+          }
 
-        a.more:hover {
-          filter: none;
-          color: $color-primary;
+          a.more {
+            font-size: 36px;
+            font-weight: 900;
+            color: $color-primary-dark;
+            margin-top: auto;
+            margin-left: auto;
+          }
+
+          a.more:hover {
+            filter: none;
+            color: $color-primary;
+          }
+
+          @media (max-width: 992px) {
+            position: relative;
+
+            p {
+              font-size: 16px;
+              max-height: 144px;
+              overflow: hidden;
+
+              br {
+                display: none;
+              }
+            }
+
+            a.more {
+              background-color: $color-white;
+              color: $color-text-light;
+              font-size: 16px;
+              font-weight: normal;
+              text-transform: lowercase;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+
+            a.more:hover {
+              color: $color-black;
+            }
+
+            a.more::before {
+              content: "......";
+            }
+          }
         }
       }
     }
