@@ -4,16 +4,31 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 16px;
+    padding-bottom: 64px;
+  }
+
   >.title {
     font-size: 48px;
     font-weight: bold;
     border-left: 8px solid $color-bar-title;
     padding-left: 12px;
     margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   >.posts {
     margin-bottom: 64px;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
 
     >.post {
       margin-left: -12px;
@@ -21,18 +36,32 @@
       margin-bottom: 60px;
       display: flex;
 
+      @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        margin-bottom: 24px;
+      }
+
       >* {
         padding-left: 12px;
         padding-right: 12px;
         width: 50%;
+
+        @media (max-width: $breakpoint-sm) {
+          width: 100%;
+        }
       }
 
       >img {
         align-self: center;
 
-        @media (max-width: 992px) {
+        @media (max-width: $breakpoint-lg) {
           aspect-ratio: 1.730769230769231;
           object-fit: cover;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          aspect-ratio: 1.788461538461538;
+          margin-bottom: 8px;
         }
       }
 
@@ -44,7 +73,7 @@
           font-size: 32px;
           color: $color-primary-dark;
 
-          @media (max-width: 992px) {
+          @media (max-width: $breakpoint-lg) {
             font-size: 24px;
           }
 
@@ -60,7 +89,7 @@
           align-items: center;
           margin-bottom: 16px;
 
-          @media (max-width: 992px) {
+          @media (max-width: $breakpoint-lg) {
             margin-bottom: 4px;
           }
 
@@ -68,7 +97,7 @@
             font-size: 20px;
             font-weight: 500;
 
-            @media (max-width: 992px) {
+            @media (max-width: $breakpoint-lg) {
               font-size: 16px;
             }
           }
@@ -82,6 +111,10 @@
           display: flex;
           flex-direction: column;
           height: 100%;
+
+          @media (max-width: $breakpoint-sm) {
+            display: none;
+          }
 
           p {
             font-size: 20px;
@@ -101,7 +134,7 @@
             color: $color-primary;
           }
 
-          @media (max-width: 992px) {
+          @media (max-width: $breakpoint-lg) {
             position: relative;
 
             p {

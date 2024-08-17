@@ -32,6 +32,15 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: $breakpoint-lg) {
+      padding-top: 8px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+
     >.path {
       margin-bottom: 8px;
 
@@ -50,6 +59,11 @@
         color: $color-primary;
         margin-right: 15px;
 
+        @media (max-width: $breakpoint-sm) {
+          font-size: 16px;
+          margin-right: 16px;
+        }
+
         a:hover {
           filter: none;
           color: $color-primary-dark;
@@ -67,18 +81,30 @@
         padding-left: 12px;
         padding-right: 12px;
 
-        @media (max-width: 992px) {
+        @media (max-width: $breakpoint-lg) {
           width: 75%;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          width: 100%;
         }
 
         .title {
           font-size: 48px;
+
+          @media (max-width: $breakpoint-sm) {
+            font-size: 24px;
+          }
         }
 
         .subtitle {
           font-size: 24px;
           font-weight: 500;
           margin-bottom: 16px;
+
+          @media (max-width: $breakpoint-sm) {
+            font-size: 16px;
+          }
         }
 
         >.sections {
@@ -87,15 +113,23 @@
           >.section {
             margin-bottom: 40px;
 
-            @media (max-width: 992px) {
+            @media (max-width: $breakpoint-lg) {
               margin-bottom: 24px;
+            }
+
+            @media (max-width: $breakpoint-sm) {
+              margin-bottom: 16px;
             }
 
             img {
               margin-bottom: 8px;
 
-              @media (max-width: 992px) {
+              @media (max-width: $breakpoint-lg) {
                 margin-bottom: 16px;
+              }
+
+              @media (max-width: $breakpoint-sm) {
+                margin-bottom: 8px;
               }
             }
 
@@ -109,6 +143,10 @@
           display: flex;
           align-items: center;
           margin-bottom: 16px;
+
+          @media (max-width: $breakpoint-sm) {
+            display: none;
+          }
 
           h3 {
             font-weight: bold;
@@ -130,6 +168,10 @@
         padding-left: 12px;
         padding-right: 12px;
 
+        @media (max-width: $breakpoint-sm) {
+          display: none;
+        }
+
         .section-title {
           font-size: 32px;
           font-weight: bold;
@@ -137,7 +179,7 @@
           display: flex;
           margin-bottom: 4px;
 
-          @media (max-width: 992px) {
+          @media (max-width: $breakpoint-lg) {
             font-size: 16px;
             margin-bottom: 8px;
           }
@@ -159,7 +201,7 @@
             margin-right: 24px;
             margin-bottom: 4px;
 
-            @media (max-width: 992px) {
+            @media (max-width: $breakpoint-lg) {
               font-size: 16px;
               margin-right: 16px;
               margin-bottom: 0;
@@ -178,12 +220,16 @@
       margin-left: -12px;
       margin-right: -12px;
 
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+
       .container-pagination {
         width: 66.666666%;
         padding-left: 12px;
         padding-right: 12px;
 
-        @media (max-width: 992px) {
+        @media (max-width: $breakpoint-lg) {
           width: 100%;
         }
 

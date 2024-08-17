@@ -2,21 +2,37 @@
   padding-top: 96px;
   padding-bottom: 80px;
 
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   .title {
     font-size: 48px;
     font-weight: bold;
     border-left: 8px solid $color-bar-title;
     padding-left: 12px;
     margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   .menu {
     display: flex;
+    align-items: center;
     margin-bottom: 40px;
 
     label {
       font-size: 24px;
       margin-right: 16px;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 16px;
+        margin-right: 8px;
+      }
     }
 
     select {
@@ -25,6 +41,10 @@
       color: #495057C0;
       padding-left: 11px;
       border: 1px solid #CED4DA;
+
+      @media (max-width: $breakpoint-sm) {
+        max-width: 276px;
+      }
     }
   }
 
@@ -35,7 +55,7 @@
     margin-right: -12px;
     margin-bottom: -48px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $breakpoint-lg) {
       margin-bottom: -24px;
     }
 
@@ -51,9 +71,13 @@
       padding-right: 12px;
       margin-bottom: 48px;
 
-      @media (max-width: 992px) {
+      @media (max-width: $breakpoint-lg) {
         width: 50%;
         margin-bottom: 24px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 100%;
       }
 
       .text {

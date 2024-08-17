@@ -2,6 +2,11 @@
   padding-top: 96px;
   padding-bottom: 80px;
 
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
   >* {
     max-width: 856px;
   }
@@ -12,6 +17,11 @@
     border-left: 8px solid $color-bar-title;
     padding-left: 12px;
     margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   .subtitle {
@@ -23,6 +33,10 @@
   ul {
     margin-bottom: -32px;
 
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: -32px;
+    }
+
     li {
       .question {
         font-size: 20px;
@@ -32,6 +46,10 @@
 
       .answer {
         margin-bottom: 32px;
+
+        @media (max-width: $breakpoint-sm) {
+          margin-bottom: 24px;
+        }
       }
     }
   }
