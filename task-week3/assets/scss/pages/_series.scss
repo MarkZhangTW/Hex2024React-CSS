@@ -1,5 +1,11 @@
-.wrap-series {
+.wrapper-series {
   >.selections>.container {
+
+    @media (max-width: $breakpoint-sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     ul {
       display: flex;
       justify-content: space-between;
@@ -9,22 +15,27 @@
         width: 100%;
 
         a {
-          border: 1px solid #DCDCDC;
-          padding: 23px 0;
+          border: 1px solid $color-border;
+          padding-top: 23px;
+          padding-bottom: 23px;
           width: 100%;
-          font-family: "Roboto", sans-serif;
           font-size: 32px;
           font-weight: 500;
           text-align: center;
+
+          @media (max-width: $breakpoint-sm) {
+            font-size: 16px;
+          }
         }
-        
+
         a:hover {
           filter: none;
+          color: $color-primary;
         }
 
         a.active {
           padding-bottom: 16px;
-          border-bottom: 8px solid #AA0601;
+          border-bottom: 8px solid $color-primary;
         }
       }
     }
@@ -38,23 +49,48 @@
       aspect-ratio: 3.243243;
       background-size: cover;
       background-position: center;
+
+      @media (max-width: $breakpoint-lg) {
+        aspect-ratio: 1.382352941176471;
+      }
     }
 
     .bg1 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-1.png');
+
+      @media (max-width: $breakpoint-lg) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-1.png');
+      }
     }
+
     .bg2 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-2.png');
+
+      @media (max-width: $breakpoint-lg) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-2.png');
+      }
     }
+
     .bg3 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-3.png');
+
+      @media (max-width: $breakpoint-lg) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-3.png');
+      }
     }
+
     .bg4 {
       background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-4.png');
+
+      @media (max-width: $breakpoint-lg) {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-sm-4.png');
+      }
     }
+
     .bg5 {
       background-color: #5F3E2D20;
     }
+
     .bg6 {
       background-color: #B7592920;
     }
@@ -63,31 +99,55 @@
   >.items {
     display: none;
   }
+
   >.items.active {
     display: block;
+
     >.container {
-      padding: 80px 12px;
-      max-width: 1320px;
+      padding-top: 80px;
+      padding-bottom: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
+      @media (max-width: $breakpoint-sm) {
+        padding-top: 40px;
+        padding-bottom: 64px;
+      }
+
       .title {
-        font-family: "Roboto", sans-serif;
         font-size: 42px;
         font-weight: 500;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+        }
+
       }
 
       .subtitle {
         font-size: 32px;
         margin-bottom: 32px;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
       }
 
-      >ul {
+      >ul.items {
         display: flex;
         flex-wrap: wrap;
         margin-left: -12px;
         margin-right: -12px;
+
+        @media (max-width: $breakpoint-lg) {
+          margin-bottom: 40px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+        }
 
         li {
           display: flex;
@@ -97,75 +157,80 @@
           padding-right: 12px;
           margin-bottom: 80px;
 
+          @media (max-width: $breakpoint-lg) {
+            width: 50%;
+            margin-bottom: 40px;
+          }
+
+          @media (max-width: $breakpoint-sm) {
+            width: 100%;
+            margin-bottom: 24px;
+          }
+
           .text {
             display: flex;
             justify-content: space-between;
 
             p {
-              font-family: "Roboto", sans-serif;
               font-size: 24px;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
+
             p.price {
               font-weight: 500;
-              color: #AA0601;
+              color: $color-primary;
             }
           }
 
           .colors {
             display: flex;
-            margin-right: -8px;
 
             .color {
-              width: 24px;
+              width: 1.5em;
               aspect-ratio: 1;
               border-radius: 4px;
               margin-right: 8px;
+
+              @media (max-width: $breakpoint-sm) {
+                width: 1em;
+              }
             }
+
             .color1 {
-              background-color: #5F3E2D;
+              background-color: $color-glasses-dark;
             }
+
             .color2 {
-              background-color: #B75929;
+              background-color: $color-glasses-light;
             }
-          }
-        }
-      }
-      
-      .pagination>ul {
-        display: flex;
-
-        li {
-          display: flex;
-
-          a {
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-            color: #555555;
-            padding: 9px 16px;
-            border: 1px solid #555555;
-          }
-          a.prev, a.next {
-            font-size: 19px;
-            padding: 8px 16px;
-          }
-          a.prev,a.number {
-            border-right: none;
-          }
-          a.next {
-            background-color: #F2F2F2;
-          }
-          a:hover{
-            filter: none;
-          }
-          a.active {
-            color: #FFFFFF;
-            background-color: #000000;
           }
         }
       }
     }
   }
-  >.items.active.items-sunglasses>.container>ul>li {
-    width: 33.333333%
+
+  >.items.active.items-sunglasses>.container>ul.items>li {
+    width: 33.333333%;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 50%;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
+  }
+
+  >.items.active.items-functional>.container>ul.items>li {
+    width: 33.333333%;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 50%;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
   }
 }

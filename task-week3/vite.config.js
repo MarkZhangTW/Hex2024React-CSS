@@ -13,7 +13,8 @@ export default defineConfig({
     movePagesOutPlugin()
   ],
   server: {
-    open: 'pages/'
+    open: 'pages/',
+    host: true
   },
   build: {
     rollupOptions: {

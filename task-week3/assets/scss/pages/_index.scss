@@ -1,214 +1,369 @@
-.wrap-index {
+.wrapper-index {
   >.banner {
-    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png);
+    background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png');
     background-size: cover;
     background-position: center;
-  
+
+    @media (max-width: $breakpoint-sm) {
+      background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header-sm.png');
+    }
+
     >.container {
-      padding: 296px 0;
+      height: calc(100vh - 80px);
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: flex-end;
-  
+      color: $color-primary-dark;
+
+      @media (max-width: $breakpoint-sm) {
+        height: calc(100vh - 176px);
+      }
+
       p {
         font-size: 36px;
-        color: #650300;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 16px;
+        }
       }
-  
+
       .slogan {
         font-size: 64px;
-        color: #650300;
+        font-weight: bold;
         margin-bottom: 4px;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 20px;
+        }
       }
-  
+
       a {
         padding: 6px 12px;
-        background-color: #AA0601;
+        background-color: $color-primary;
         font-size: 20px;
-        color: #FFFFFF;
+        color: $color-white;
       }
+
       a:hover {
         filter: none;
-        background-color: #650300;
+        background-color: $color-primary-dark;
       }
     }
   }
-  
+
   >.features {
-    background-color: #FBF2F2;
-  
+    background-color: $color-primary-light;
+    color: $color-primary-dark;
+
     >.container {
-      padding: 80px 12px;
-      max-width: 1320px;
-  
+      padding-top: 80px;
+      padding-bottom: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
-  
+
+      @media (max-width: $breakpoint-sm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
       .title {
         font-size: 48px;
         font-weight: bold;
-        color: #650300;
         margin-bottom: 24px;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+        }
       }
-  
+
       ul {
         display: flex;
         margin-left: -12px;
         margin-right: -12px;
-  
+
+        @media (max-width: $breakpoint-lg) {
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          margin-bottom: -24px;
+        }
+
         li {
           display: flex;
           flex-direction: column;
           align-items: center;
           width: 25%;
-          margin-left: 12px;
-          margin-right: 12px;
-    
+          padding-left: 12px;
+          padding-right: 12px;
+
+          @media (max-width: $breakpoint-lg) {
+            width: 50%;
+          }
+
+          @media (max-width: $breakpoint-sm) {
+            width: 100%;
+            margin-bottom: 24px;
+          }
+
           img {
-            width: 100px;
+            max-width: 100px;
             margin-bottom: 16px;
           }
-  
+
           h3 {
             font-size: 24px;
             font-weight: bold;
-            color: #650300;
             margin-bottom: 8px;
+          }
+
+          p {
+            color: $color-black;
           }
         }
       }
     }
   }
-  
+
   >.series>.container {
-    padding: 80px 12px;
-    max-width: 1320px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  
+
+    @media (max-width: $breakpoint-sm) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
     .title {
+      align-self: center;
       font-size: 48px;
       font-weight: bold;
-      color: #650300;
+      color: $color-primary-dark;
       margin-bottom: 48px;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
     }
-  
+
     ul {
       display: flex;
       margin-left: -12px;
       margin-right: -12px;
-  
+
+      @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -24px;
+      }
+
       li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 33%;
-        margin-left: 12px;
-        margin-right: 12px;
-  
+        width: 33.333333%;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        @media (max-width: $breakpoint-lg) {
+          width: 50%;
+          margin-bottom: 24px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          width: 100%;
+        }
+
         img {
           margin-bottom: 8px;
         }
-  
+
         h3 {
-          font-family: "Roboto", sans-serif;
           font-size: 48px;
           font-weight: 900;
           font-style: italic;
-          color: #AA0601;
+          color: $color-primary;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
         }
       }
     }
   }
-  
+
   >.co-branding {
     background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg.png);
     background-size: cover;
     background-position: center;
-  
+
     >.container {
-      padding: 80px 0;
+      padding-top: 80px;
+      padding-bottom: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
-  
+
+      @media (max-width: $breakpoint-sm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
       .title {
         font-size: 48px;
         font-weight: bold;
-        color: #FFFFFF;
+        color: $color-white;
         margin-bottom: 48px;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
       }
-  
+
       ul {
         display: flex;
-  
-        li>h3 {
-          background-color: #FFFFFF;
-          font-family: Roboto;
-          font-size: 48px;
-          font-weight: 900;
-          font-style: italic;
-          color: #AA0601;
-          padding: 8px 0;
-          text-align: center;
-          border-left: 1px solid #DDD;
-          border-right: 1px solid #DDD;
+        width: 100%;
+
+        @media (max-width: $breakpoint-lg) {
+          flex-direction: column;
+          margin-bottom: -24px;
+        }
+
+        li {
+          width: 50%;
+
+          @media (max-width: $breakpoint-lg) {
+            width: 100%;
+            margin-bottom: 24px;
+          }
+
+          .bg {
+            aspect-ratio: 2.7;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .bg1 {
+            background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-section4-1.png');
+
+            @media (max-width: $breakpoint-sm) {
+              aspect-ratio: 1.45;
+              background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-section4-1-sm.png');
+            }
+          }
+
+          .bg2 {
+            background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-section4-2.png');
+
+            @media (max-width: $breakpoint-sm) {
+              aspect-ratio: 1.45;
+              background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-section4-2-sm.png');
+            }
+          }
+
+          h3 {
+            background-color: $color-white;
+            font-size: 48px;
+            font-weight: 900;
+            font-style: italic;
+            color: $color-primary;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-align: center;
+            border-left: 1px solid $color-border;
+            border-right: 1px solid $color-border;
+          }
         }
       }
     }
   }
-  
+
   >.recommends>.container {
-    padding: 80px 12px;
-    max-width: 1320px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
+    @media (max-width: $breakpoint-sm) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
     .title {
       font-size: 48px;
       font-weight: bold;
-      color: #650300;
+      color: $color-primary-dark;
       margin-bottom: 48px;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
     }
-  
+
     ul {
       display: flex;
       margin-left: -12px;
       margin-right: -12px;
-  
+
+      @media (max-width: $breakpoint-lg) {
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: -16px;
+      }
+
       li {
         width: 25%;
-        margin-left: 12px;
-        margin-right: 12px;
-        box-shadow: 0 2px 6px #00000029;
+        padding-left: 12px;
+        padding-right: 12px;
         display: flex;
         flex-direction: column;
-  
+
+        @media (max-width: $breakpoint-lg) {
+          width: 50%;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+
         img {
           border-radius: 4px 4px 0 0;
+
+          @media (max-width: $breakpoint-sm) {
+            aspect-ratio: 1.137254901960784;
+            object-fit: cover;
+          }
         }
-  
+
         .text {
           padding: 15px;
           border: 1px solid #DEE2E6;
+          box-shadow: 0 2px 6px #00000029;
           display: flex;
           flex-direction: column;
           height: 100%;
-  
+
           .info {
             .name {
               font-weight: 500;
               margin-bottom: 8px;
             }
-  
+
             p {
               min-height: 7.5em;
             }
           }
-  
+
           .date {
             margin-top: auto;
             font-size: 14px;
@@ -218,85 +373,121 @@
       }
     }
   }
-  
+
   >.feedback {
-    background-color: #FBF2F2;
-  
+    background-color: $color-primary-light;
+
     >.container {
-      padding: 80px 0;
+      padding-top: 80px;
+      padding-bottom: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
       max-width: 636px;
-  
+      padding-left: 0;
+      padding-right: 0;
+
+      @media (max-width: $breakpoint-lg) {
+        max-width: 576px;
+        padding-left: 36px;
+        padding-right: 36px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        padding-left: 13px;
+        padding-right: 14px;
+      }
+
       .title {
         font-size: 48px;
         font-weight: bold;
-        color: #650300;
+        color: $color-primary-dark;
         margin-bottom: 48px;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
       }
-  
+
       p {
         font-size: 20px;
         margin-bottom: 24px;
       }
-  
+
       form {
         width: 100%;
         display: flex;
         flex-direction: column;
-  
+
         .form-contact {
           display: flex;
           flex-direction: column;
           margin-bottom: 16px;
-  
+
           label {
             margin-bottom: 8px;
           }
-  
-          input, textarea {
-            background: #00000000;
-            border: 1px solid #000000;
+
+          input,
+          textarea {
+            background-color: inherit;
+            border: 1px solid $color-black;
             padding: 5px 11px;
             font-size: 16px;
             line-height: 1.5;
           }
-  
-          input::placeholder, textarea::placeholder {
+
+          input::placeholder,
+          textarea::placeholder {
             color: #00000033;
           }
         }
-  
+
         .privacy {
           display: flex;
           flex-direction: row-reverse;
           justify-content: start;
           margin-bottom: 48px;
-  
+
           label {
             margin-bottom: 0;
           }
-  
+
           input {
-            background-color: transparent;
+            width: 1.5em;
+            height: 1.5em;
           }
         }
-  
+
         .submit {
-          padding: 16px 176px;
-          font-family: "Noto Sans TC";
+          padding-top: 1em;
+          padding-bottom: 1em;
+          width: 416px;
+          font-family: inherit;
           font-weight: bold;
-          font-size: 16px;
-          color: #FFFFFF;
-          background-color: #AA0601;
+          font-size: inherit;
+          line-height: inherit;
+          color: $color-white;
+          background-color: $color-primary;
           border: none;
-          margin: 0 auto;
+          align-self: center;
           cursor: pointer;
+
+          @media (max-width: $breakpoint-lg) {
+            width: 336px;
+          }
+
+          @media (max-width: $breakpoint-sm) {
+            width: 100%;
+          }
         }
-  
+
         .submit:hover {
-          background-color: #650300;
+          background-color: $color-primary-dark;
         }
       }
     }

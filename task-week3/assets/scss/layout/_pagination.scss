@@ -1,0 +1,37 @@
+.wrapper>div>.container>.pagination {
+  display: flex;
+  align-self: center;
+
+  li {
+    display: flex;
+
+    a {
+      font-size: 18px;
+      color: $color-text-light;
+      border: 1px solid $color-text-light;
+      padding: 10px 15px;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 16px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+    }
+
+    a.number,
+    a.next {
+      border-left: none;
+    }
+
+    a.next {
+      background-color: #F2F2F2;
+    }
+
+    a:hover,
+    a.active {
+      filter: none;
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+}

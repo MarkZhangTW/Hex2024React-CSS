@@ -1,37 +1,73 @@
-.footer {
-  background-color: $bgc-main;
+.wrapper-footer>.footer {
+  background-color: $color-primary;
+  color: $color-white;
 
   >.container {
     padding-top: 48px;
+    padding-bottom: 32px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $breakpoint-lg) {
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
 
     >.links {
       display: flex;
       justify-content: space-between;
       margin-bottom: 24px;
 
+      @media (max-width: $breakpoint-sm) {
+        position: absolute;
+        z-index: 1;
+        right: 15px;
+      }
+
       .nav {
         display: flex;
         align-items: center;
         margin-right: -48px;
 
+        @media (max-width: $breakpoint-md) {
+          margin-right: 0;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          display: none;
+        }
+
         a {
-          color: #FFFFFF;
           margin-right: 48px;
+
+          @media (max-width: $breakpoint-md) {
+            margin-right: 0;
+          }
         }
       }
 
       .media {
         display: flex;
         align-items: center;
-        margin-left: -32px;
 
         a {
+          width: 3em;
           margin-left: 32px;
 
-          img {
-            width: 48px;
+          @media (max-width: $breakpoint-lg) {
+            width: 40px;
+            margin-left: 16px;
+          }
+
+          @media (max-width: $breakpoint-sm) {
+            width: 24px;
+            margin-left: 8px;
           }
         }
 
@@ -39,19 +75,30 @@
     }
 
     .contact {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
+
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 16px;
+      }
 
       a {
         font-size: 36px;
-        color: #FFFFFF;
+        display: flex;
+        align-items: center;
         margin-bottom: 8px;
 
+        @media (max-width: $breakpoint-sm) {
+          font-size: 16px;
+        }
+
         span {
-          font-size: 36px;
-          margin-right: 20px;
-          vertical-align: middle;
+          font-size: 1.333333em;
+          margin-right: 16px;
+
+          @media (max-width: $breakpoint-sm) {
+            font-size: 1.5em;
+            margin-right: 8px;
+          }
         }
 
       }
@@ -59,25 +106,40 @@
 
     hr {
       width: 100%;
+      margin-top: 0;
       margin-bottom: 32px;
+      border-top: 0;
+
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 16px;
+      }
     }
 
     .policies {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 32px;
+      font-size: 14px;
 
-      p {
-        color: #FFFFFF;
+      @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        font-size: 16px;
       }
 
       .links {
-        margin-left: -48px;
+        display: flex;
+
+        @media (max-width: $breakpoint-sm) {
+          flex-direction: column;
+        }
+
         a {
-          font-size: 14px;
-          color: #FFFFFF;
           margin-left: 48px;
+
+          @media (max-width: $breakpoint-sm) {
+            margin-left: 0;
+            display: flex;
+            margin-top: 8px;
+          }
         }
       }
     }

@@ -1,11 +1,21 @@
-$bgc-main: #AA0601;
+$color-primary: #AA0601;
+$color-primary-dark: #650300;
+$color-primary-light: #FBF2F2;
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-border: #DCDCDC;
+$color-glasses-dark: #5F3E2D;
+$color-glasses-light: #B75929;
+$color-text-light: #555555;
+$color-bar-title: #9F1213;
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
 
+a,
 a:visited {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -25,13 +35,29 @@ img {
 }
 
 body {
-  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", "Roboto", sans-serif, system-ui;
   line-height: 1.5;
+}
 
-  div {
-    .container {
-      max-width: 1296px;
-      margin: 0 auto;
-    }
+.font-roboto {
+  font-family: "Roboto", sans-serif, system-ui;
+}
+
+// Top Wrapper
+body>.wrapper>div>.container {
+  margin: 0 auto;
+  max-width: 1296px;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1320px;
+
+  @media (max-width: $breakpoint-lg) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding-left: 13px;
+    padding-right: 14px;
   }
 }
