@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export default defineConfig({
-  base: '/Hex-2024-React/task-week3/',
+  base: '/Hex2024React-CSS/task-week3/',
   plugins: [
     liveReload(['./layout/*.ejs']),
     ViteEjsPlugin(),
